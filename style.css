@@ -1,0 +1,81 @@
+.header {
+    background: #fbcdcd;
+    position: static;
+}
+
+.main {
+    background: #fbcdcd;
+    position: static;
+}
+
+.accordion {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.accordion-item {
+    flex: 1 1 100%;
+    margin: 10px;
+    background-color: #fdb5b5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: normal;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.accordion-content {
+    padding: 10px;
+    margin: 0;
+    line-height: 1.5;
+    display: none;
+    overflow: hidden;
+    transition: 0.4 easy-out;
+}
+
+/* Показать содержимое при нажатии на заголовок */
+.accordion-item.active + .accordion-content {
+    display: block;
+    transition: 0.4 ease-in-out;
+}
+
+/* */
+@media screen and (min-width: 320px) and (max-width: 819px) {
+    .accordion-item {
+        flex: 1 1 100%;
+        font-family: 'Inconsolata', monospace;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1919px) {
+    .accordion-item {
+        flex: 1 1 calc(50% - 20 px);
+        font-family: 'Tilt Neon', cursive;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .accordion-item {
+        flex: 1 1 calc(33.33% - 20 px);
+        font-family: 'Ubuntu', sans-serif;
+    }
+}
+
+.footer {
+    background: #fbcdcd;
+    position: static;
+}
