@@ -48,6 +48,23 @@ body {
     transition: background-color 0.4s ease;
 }
 
+.accordion-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    pointer-events: none;
+    transition: 0.4s ease-out;
+}
+
+.accordion-item:active .accordion-icon.fa-plus {
+    display: none;
+}
+
+.accordion-item:active .accordion-icon.fa-minus {
+    display: inline-block;
+}
+
+
 .accordion-content {
     padding: 10px;
     margin: 0;
