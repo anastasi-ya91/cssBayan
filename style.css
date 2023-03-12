@@ -109,9 +109,6 @@ input [type="radio" i] {
     opacity: 1;
 }
 
-
-
-
 /* .accordion-container {
     max-width: 800px;
     margin: auto;
@@ -197,21 +194,50 @@ input [type="radio" i] {
 }
 
 @media screen and (min-width: 820px) and (max-width: 1919px) {
+    body {
+        max-width: 70%;
+    }
     .header {
         font-family: 'Tilt Neon', cursive;
     }
-    .accordion-item:focus .accordion-content {
+    /* .accordion-item:focus .accordion-content {
         display: block;
         outline: none;
+    } */
+    .accordion-open {
+        width: 5%;
+        opacity: 1;
     }
-    
+    .accordion input:checked ~ .accordion-content img {
+        max-width: 50%;
+    }
     .accordion-item {
         flex: 1 1 calc(50% - 20 px);
         font-family: 'Tilt Neon', cursive;
     }
 }
 
-@media screen and (min-width: 1920px) {
+@media (hover: hover) and (pointer: fine) {
+    .accordion input:hover ~ .accordion-header {
+        color: black;
+    }
+    .accordion-conteiner:hover .accordion-header .accordion-open {
+        opacity: 1;
+    }
+    .accordion input:hover + .accordion-header .accordion-open {
+        background-image: url("img/acc.png");
+        transition: all 0.7s ease-in;
+    }
+    .accordion input:hover ~ .accordion-content {
+        opacity: 1;
+        max-height: 100%;
+        transition: all 0.7s ease-in;
+    } 
+    .accordion input:hover ~ .accordion-content img {
+        max-width: 33%;
+        transition: all 0.7s ease-in;
+    }
+    
     .header {
         font-family: 'Ubuntu', sans-serif;
     }
@@ -225,6 +251,7 @@ input [type="radio" i] {
         flex: 1 1 calc(33.33% - 20 px);
         font-family: 'Ubuntu', sans-serif;
     }
+    
 }
 
 .footer {
