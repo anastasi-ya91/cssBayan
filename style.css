@@ -54,12 +54,22 @@ body {
     transition: 0.4s;
 }
 
-.accordion-item:focus .accordion-icon.fa-plus {
-    display: none;
+.accordion-icon.fa-plus {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
 }
 
-.accordion-item:not(.focus) .accordion-icon.fa-minus {
-    display: none;
+.accordion-icon.fa-minus {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.accordion-icon.fa-plus:target {
+    opacity: 0;
+}
+
+.accordion-icon.fa-plus:target + .accordion-icon.fa-minus {
+    opacity: 1;
 }
 
 .accordion-content {
@@ -68,7 +78,7 @@ body {
     line-height: 1.5;
     display: none;
     overflow: hidden;
-    transition: 0.4s;
+    transition: all 0.4s ease;
 }
 
 img:hover,
