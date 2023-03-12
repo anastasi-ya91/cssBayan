@@ -11,7 +11,7 @@ body {
     position: static;
     margin: 0 auto;
     padding: 20px;
-    font-size: large;
+    font-size: 1.5em;
 }
 
 .accordion {
@@ -60,10 +60,9 @@ body {
     display: none;
 }
 
-.accordion-item:active .accordion-icon.fa-minus {
+.accordion-item:not(.active) .accordion-icon.fa-minus{
     display: inline-block;
 }
-
 
 .accordion-content {
     padding: 10px;
